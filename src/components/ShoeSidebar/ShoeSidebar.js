@@ -23,7 +23,12 @@ const Sidebar = () => {
   );
 };
 
-const Wrapper = styled.aside``;
+const Wrapper = styled.aside`
+  @media ${p=>p.theme.tabletAndSmaller} {
+      display: none;
+      flex-basis: initial;
+    }
+`;
 
 const Link = styled.a`
   display: block;

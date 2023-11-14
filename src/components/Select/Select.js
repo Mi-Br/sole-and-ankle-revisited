@@ -36,7 +36,11 @@ const Select = ({ label, value, children, ...delegated }) => {
 const Wrapper = styled.label`
   display: flex;
   align-items: baseline;
-`;
+  @media ${p=>p.theme.mobileAndSmaller} {
+  display: none;
+  }
+
+`
 
 const VisibleLabel = styled.span`
   color: ${COLORS.gray[700]};

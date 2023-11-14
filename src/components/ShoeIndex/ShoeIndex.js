@@ -24,7 +24,7 @@ const ShoeIndex = ({ sortId, setSortId }) => {
             <option value="price">Price</option>
           </Select>
         </Header>
-        <Spacer size={32} />
+        <Spacer id="keep_mobile" size={32} />
         <ShoeGrid />
       </MainColumn>
       <LeftColumn>
@@ -47,14 +47,29 @@ const Wrapper = styled.div`
   flex-direction: row-reverse;
   align-items: baseline;
   gap: 32px;
+  @media ${p=>p.theme.tabletAndSmaller} {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: unset;
+    }
+
 `;
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
+  @media ${p=>p.theme.tabletAndSmaller} {
+    flex-basis: unset
+    }
+
 `;
 
 const MainColumn = styled.div`
   flex: 1;
+  @media ${p=>p.theme.tabletAndSmaller} {
+  #keep_mobile {
+    display: block;
+  }
+  }
 `;
 
 const Header = styled.header`
