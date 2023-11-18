@@ -41,12 +41,3 @@ const Main = styled.main`
 `
 
 export default App;
-
-
-/*
- @media (max-width: ${props.theme.queries.tabletAndUp}) {
-  background-color: red;
- }
-  @media (max-width: ${props.theme.queries.desktopAndUp}) {
-  background-color: pink
- } */

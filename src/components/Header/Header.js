@@ -33,18 +33,18 @@ const Header = () => {
         <MobileNav>
           <Icon id='shopping-bag'></Icon>
           <Icon id='search'></Icon>
-          <Icon id='menu'></Icon>
+          <Icon id='menu' onClick={() => setShowMobileMenu(true)}></Icon>
         </MobileNav>
         <Side id="hideMobile"/>
       </MainHeader>
-
-      <MobileMenu
-        isOpen={showMobileMenu}
-        onDismiss={() => setShowMobileMenu(false)}
-      />
+        <MobileMenu
+          isOpen={showMobileMenu}
+          onDismiss={() => setShowMobileMenu(false)}
+        />
     </header>
   );
 };
+
 
 const MainHeader = styled.div`
   display: flex;
@@ -52,6 +52,7 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+
 
   @media ${p=>p.theme.tabletAndSmaller} {
     border-top: 4px solid ${COLORS.gray[900]};
